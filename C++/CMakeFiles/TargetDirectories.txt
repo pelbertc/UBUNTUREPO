@@ -1,0 +1,3 @@
+/home/pate/C++/CMakeFiles/rebuild_cache.dir
+/home/pate/C++/CMakeFiles/HelloWorld.dir
+/home/pate/C++/CMakeFiles/edit_cache.dir
