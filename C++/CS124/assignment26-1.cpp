@@ -40,20 +40,30 @@ float readFile(char fileName[])
    float grade = {0};
    float sum = {0};
    float average = {0};
+   int itemRead = 0;
    
    while(fin >> grade)
-   { 
-      //cout << grade << endl;
+   {
+       //cout << grade << endl;
       sum += grade;
-
+      ++itemRead;
    }
-   
-   average = sum/10;
+
+   if(itemRead < 10 || itemRead > 10)
+     {
+       cout << "Error reading file " << endl; 
+       //cout << itemRead << endl;
+       exit(EXIT_FAILURE);
+     }
+   else
+     {
+       average = sum/10;
       
-   //close and return the data
-   fin.close();
-   //return sum;
-   return average;
+       //close and return the data
+       fin.close();
+       //return sum;
+       return average;
+     }
 }
 
 /**********************************************************************
