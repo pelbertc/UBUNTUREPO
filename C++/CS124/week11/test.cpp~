@@ -1,0 +1,47 @@
+#include <iostream>
+
+using namespace std;
+
+
+
+int main()
+{
+int numbers[][] =
+  {
+    { 1, 2, 3 },
+    { 4, 5, 6 },
+    { 7, 8, 9 }
+  };
+
+ cout << numbers[1][2];
+}
+
+/*
+int main()
+{
+  
+    char x = 'a';
+
+    if (x > 'b');
+    x = 'c';
+
+    cout << x << endl;
+  
+    int i = 0;
+    for (int j = 2; j < 7; j += 2)
+      i++;
+    cout << i << endl;
+
+    int a = 0;
+    for (int b = 1; b < 6; b++)
+      a += b;
+    cout << a << endl;
+
+    int k = 1;
+    while (k < 3)
+      k++;
+
+    cout << k << endl;
+}
+  
+*/

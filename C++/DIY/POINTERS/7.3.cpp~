@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  double a = 1000;
+  double b = 2000;
+  double *p = &a;
+  double *q = p;
+  b = *q;
+  p = &b;
+  a = *p + *q;
+  cout << a << " " << b << endl;
+  
+}
