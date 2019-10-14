@@ -64,9 +64,28 @@ if [ "$EXT" != "" ]; then
 	fi
 
 	#count size of files with specific extension
-	ls -l $LOCATION | awk '/^-/' | grep "\.$EXT$" | awk -v stats=$STATS -f /home/pate/CODING/LINUX_BASH_TRAINING/AWK/size.awk
+	ls -l $LOCATION | awk '/^-/' | grep "\.$EXT$" | awk '{
+	sum+=$5
+	if(NR==1) {
+		min=$5
+		max=$5
+		min_name=$9
+		max_name=$9
+	}
 
-else
-	ls -l $LOCATION | awk '/^-/' | awk -v stats=$STATS -f /home/pate/CODING/LINUX_BASH_TRAINING/AWK/size.awk
+	if($5 > max) {
+		max=$5
+		max_name=$9
+	}
+
+	if($5 < min) {
+           min=$5
+	   min_name=$9
+	}
+}
+END{
+	print "SUM: ", sum/1024/1024 " MB"
+	print "Files: ",NR
+}'
 
 fi
