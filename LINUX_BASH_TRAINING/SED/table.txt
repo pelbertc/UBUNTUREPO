@@ -1,0 +1,6 @@
+Name    AGE	UNIT
+Vaoahi	4	IT
+Uinise	9	HR
+Takai	1	IT
+Kido	19	HR
+Vaoahi  5	HR

@@ -1,0 +1,6 @@
+Name    AGE	UNIT
+Ame	4	IT
+Uinise	9	HR
+Takai	1	IT
+Kido	***	HR
+Ame  	5	HR
