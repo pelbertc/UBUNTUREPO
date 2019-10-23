@@ -1,0 +1,27 @@
+---------------------------------------------------------
+…or create a new repository on the command line
+echo "# UBUNTUREPO" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/pelbertc/UBUNTUREPO.git
+git push -u origin master
+…or push an existing repository from the command line
+ll
+git push -u origin master
+
+From <https://github.com/pelbertc/UBUNTUREPO> 
+
+-------------------------------------UPDATING FILES TO GIT
+pelbertc - P@l0ma85
+	1. ADD - git add . You can also add a specific file using file name.
+	2. COMMIT - git commit -m "what are you committing"
+	3. PUSH  - git push -u origin master
+
+------------------------------------REMOVING A SINGLE COMMITTED FILE
+
+git reset --soft HEAD^1
+git rm --cached <file-name>
+git commit -m "<your-message>"
+
+------------------------------------
