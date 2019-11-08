@@ -1,0 +1,72 @@
+a loop is a block of code that iterates a list of commands as long as the loop control conditions is true
+
+for arg in [ list ]
+do
+  command(s)
+done
+
+-------------------
+Example 1
+
+for PLANET in Mercury Venus Earth
+do 
+  echo $PLANET
+done
+
+Print
+#Mercury
+#Venus
+#Earth
+
+Explanation
+The internal separator recognizes the space between each planet so its able to devide these elements allowing for them to be printed separatedly
+-------------------
+Example 2
+
+PLANETS="Mercury Venus Earth"
+#If Planets are printed like this
+"Mercury 
+Venus
+Earth" then Planets will be printed like above
+for PLANET in "$PLANETS"
+do
+  echo $PLANET
+done
+
+Print
+#Mercury Venus Earth
+
+Explanation
+since there is a double quotation around the plantes the internal separator sees the list as one string which printed them accordingly as one
+---------------------
+Example 3
+
+for FILE in *.txt
+do 
+echo $FILE
+done
+
+Print
+#hello.txt
+#me.txt
+---------------------
+Example 4
+
+for NUMBER in {1..20}
+do echo $NUMBER
+done
+
+Print
+#1
+...
+#20
+---------------------
+Example 5
+for ARG in "$a"
+do
+  echo $ARG
+done
+
+Explanation
+Print all arguments
+---------------------

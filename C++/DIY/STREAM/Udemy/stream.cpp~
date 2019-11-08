@@ -1,0 +1,52 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+   
+  cout << "noboolalpha - default (10 == 10): " << (10 == 10) << endl;
+  cout << "noboolalpha - default (10 == 20): " << (10 == 20) << endl;
+
+  //set the true/false formatting
+  cout << boolalpha;
+  cout << "boolalpha (10 == 10): " << (10 == 10) << endl;
+  cout << "boolalpha (10 == 20): " << (10 == 20) << endl;
+  
+  //toggle to 0/1 or default
+  cout << noboolalpha;
+  cout << "noboolalpha (10 == 10): " << (10 == 10) << endl;
+  cout << "noboolalpha (10 == 20): " << (10 == 20) << endl;
+
+  //set back to true/false using setf
+  cout.setf(std::ios::boolalpha);
+  cout << "noboolalpha (10 == 10): " << (10 == 10) << endl;
+  cout << "noboolalpha (10 == 20): " << (10 == 20) << endl;
+
+  cout << "\n---------------------------------------------------" << endl;
+  cout << "Enter a number: ";
+  int num{0};
+  cin >> num;
+  cout << "Decimal default : " << num << endl;
+  cout << "Hexadecimal : " << std::hex << num << endl;
+  cout << "Hexadecimal : " << std::hex << std::uppercase << num << endl;
+  cout << "Hexadecimal : " << std::hex << num << endl;
+  cout << "Hexadecimal : " << std:: hex << std::nouppercase << num << endl;
+
+  cout << "Octal : " << std::oct << num << endl;
+  cout << "Hexadecimal : " << std::hex << std::showbase << num << endl;
+  cout << "Octal : " << std::oct << num << endl;
+
+  string hello{"Vaoahi"};
+  
+  //this will set the value of the num back to original state
+ 
+  cout << std::resetiosflags(std::ios::basefield);
+  cout << "Showpos : " << std::showpos << num << endl;
+  cout << std::noshowpos;
+  cout << "Setw(10) : " << endl;
+  cout << std::setw(10) << std::left << num << hello << endl;
+
+  cout << endl;
+  
+}
